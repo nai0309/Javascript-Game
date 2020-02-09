@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *,html {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: sans-serif;
+    }
+
+header h1{
+    padding: 1rem;
+    background-color: rgb(224, 186, 89);
+    color: white;
+    text-align: center;
+}
+#btnSelect{
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#btnSelect h3{
+    margin: 1rem;
+}
+
+#btnSelect button{
+    margin: 1rem 0.5rem;
+    padding: .5rem;
+    border-style: none;
+    border-radius: 2px;
+    color: white;
+    background-color: rgba(224, 186, 89, 0.596);
+    cursor: pointer;
+    transition: 0.5s ease-in;
+}
+
+#btnSelect button:hover{
+  transform: translate(2px,-2px);
+}
+hr{
+    width: 95%;
+}
+
+</style>
+
+<body>
+
+<header>
+<h1>JavaScript game</h1>
+</header>
+<section id="btnSelect">
+    <h3>Choose a game</h3>
+    <div>
+    <button onclick="gameSelected('numGuess')">Number Guessing</button>
+    </div>
+    <hr>
+</section>
+
+<section id="gameShow">
+
+</section>
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="index.js"></script>
+    <!-- <script src="numGuess.js"></script> -->
+</body>
+</html>
