@@ -1,6 +1,6 @@
-$('document').on('click', '.guessSubmit', function () {
-    console.log("aaaa");
-});
+// $('document').on('click', '.guessSubmit', function () {
+//     console.log("aaaa");
+// });
 
 const guesses = document.querySelector(".guesses");
 const lastResult = document.querySelector(".lastResult");
@@ -12,11 +12,6 @@ let guessCount = 1;
 let resetBtn;
 
 // guessInput.focus();
-
-// $(".guessSubmit").on("click", function () { 
-//     console.log("hhhh");
-// }
-// )
 
 let randomNum = Math.floor(Math.random() * 100) + 1;
 function numCheck() {
@@ -77,3 +72,10 @@ function resetGame() {
     randomNum = Math.floor(Math.random() * 100) + 1;
 };
 
+guessSubmit.addEventListener("click", numCheck);
+guessInput.addEventListener("keyup", function (event) {
+    event.preventDefault();
+    if (event.keyCode === 13) {
+        guessSubmit.click();
+    }
+});
